@@ -38,6 +38,7 @@ document.getElementById('infoForm').addEventListener('submit', function(event) {
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
         document.getElementById('infoForm').reset();
+        GetRegisteredUser();
         alert("Your data uploaded successfully!");
     })
     .catch(function(error) {
@@ -45,7 +46,9 @@ document.getElementById('infoForm').addEventListener('submit', function(event) {
     });
 });
 
-document.getElementById('showTableBtn').addEventListener('click', function() {
+document.getElementById('showTableBtn').addEventListener('click', GetRegisteredUser);
+
+function GetRegisteredUser() {
     db.collection('users').get().then((querySnapshot) => {
         const dataTableBody = document.getElementById('dataTableBody');
         dataTableBody.innerHTML = '';
@@ -62,7 +65,7 @@ document.getElementById('showTableBtn').addEventListener('click', function() {
         document.getElementById('collection-form').style.display = 'none';
         document.getElementById('data-table').style.display = 'block';
     });
-});
+}
 
 function showMoreInfo(userId) {
     const userRef = db.collection('users').doc(userId);
