@@ -20,6 +20,8 @@ document.getElementById('infoForm').addEventListener('submit', function(event) {
     const college = document.getElementById('college').value;
     const university = document.getElementById('university').value;
     const phone = document.getElementById('phone').value;
+    const gmail = document.getElementById('gmail').value;
+    const duration = document.getElementById('duration').value;
     const gender = document.getElementById('gender').value;
 
     db.collection('users').add({
@@ -29,11 +31,14 @@ document.getElementById('infoForm').addEventListener('submit', function(event) {
         college: college,
         university: university,
         phone: phone,
-        gender: gender
+        gender: gender,
+        gmail: gmail,
+        duration: duration
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
         document.getElementById('infoForm').reset();
+        alert("Your data uploaded successfully!");
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -87,7 +92,15 @@ function showMoreInfo(userId) {
                     <td>${data.university}</td>
                 </tr>
                 <tr>
+                    <td>Duration:</td>
+                    <td>${data.duration}</td>
+                </tr>
+                <tr>
                     <td>Phone:</td>
+                    <td>HIDDEN</td>
+                </tr>
+                <tr>
+                    <td>Gmail:</td>
                     <td>HIDDEN</td>
                 </tr>
                 <tr>
