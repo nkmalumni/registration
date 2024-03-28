@@ -88,11 +88,11 @@ function showMoreInfo(userId) {
                 </tr>
                 <tr>
                     <td>Phone:</td>
-                    <td>${data.phone}</td>
+                    <td>HIDDEN</td>
                 </tr>
                 <tr>
                     <td>Gender:</td>
-                    <td>${data.gender}</td>
+                    <td>HIDDEN</td>
                 </tr>
             `;
             document.getElementById('data-table').style.display = 'none';
