@@ -105,7 +105,7 @@ function showMoreInfo(userId) {
                 </tr>
                 <tr>
                     <td>Gmail:</td>
-                    <td>HIDDEN</td>
+                    <td>${data.gmail}</td>
                 </tr>
                 <tr>
                     <td>Gender:</td>
