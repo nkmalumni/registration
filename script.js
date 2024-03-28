@@ -23,7 +23,7 @@ document.getElementById('infoForm').addEventListener('submit', function(event) {
     const gmail = document.getElementById('gmail').value;
     const duration = document.getElementById('duration').value;
     const gender = document.getElementById('gender').value;
-
+    const fb = document.getElementById('fb').value;
     db.collection('users').add({
         fullName: fullName,
         nickname: nickname,
@@ -33,7 +33,8 @@ document.getElementById('infoForm').addEventListener('submit', function(event) {
         phone: phone,
         gender: gender,
         gmail: gmail,
-        duration: duration
+        duration: duration,
+        fb: fb
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -56,7 +57,7 @@ function GetRegisteredUser() {
             const data = doc.data();
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td>${data.fullName}</td>
+                <td><a href="${data.fb}">${data.fullName}</a></td>
                 <td>${data.nickname}</td>
                 <td><button class="btn btn-info" onclick="showMoreInfo('${doc.id}')">Show More</button></td>
             `;
