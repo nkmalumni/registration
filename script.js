@@ -24,6 +24,8 @@ document.getElementById('infoForm').addEventListener('submit', function(event) {
     const duration = document.getElementById('duration').value;
     const gender = document.getElementById('gender').value;
     const fb = document.getElementById('fb').value;
+    const blood = document.getElementById('blood').value;
+
     db.collection('users').add({
         fullName: fullName,
         nickname: nickname,
@@ -34,7 +36,8 @@ document.getElementById('infoForm').addEventListener('submit', function(event) {
         gender: gender,
         gmail: gmail,
         duration: duration,
-        fb: fb
+        fb: fb, 
+        blood: blood
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
@@ -84,8 +87,16 @@ function showMoreInfo(userId) {
                     <td>${data.nickname}</td>
                 </tr>
                 <tr>
+                    <td>Blood Group:</td>
+                    <td>${data.blood}</td>
+                </tr>
+                <tr>
                     <td>Address:</td>
                     <td>${data.address}</td>
+                </tr>
+                <tr>
+                    <td>Gmail:</td>
+                    <td>${data.gmail}</td>
                 </tr>
                 <tr>
                     <td>College:</td>
@@ -102,10 +113,6 @@ function showMoreInfo(userId) {
                 <tr>
                     <td>Phone:</td>
                     <td>HIDDEN</td>
-                </tr>
-                <tr>
-                    <td>Gmail:</td>
-                    <td>${data.gmail}</td>
                 </tr>
                 <tr>
                     <td>Gender:</td>
