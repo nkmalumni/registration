@@ -1,103 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Information Collection</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS for the page */
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .header-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    .menu-btn {
+      width: 100%;
+      margin-bottom: 12px;
+      font-size: 20px;
+      border-radius: 10px;
+      padding: 15px;
+    }
+    .instruction-text {
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+    .text-section {
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
 
 <div class="container">
-    <h1 class="text-center my-4">Information Collection</h1>
-    <div id="collection-form">
-        <form id="infoForm">
-            <div class="form-group">
-                <label for="fullName">Full Name: *</label>
-                <input placeholder="Ex- Mahmudul hasan" type="text" class="form-control" id="fullName" required>
-            </div>
-            <div class="form-group">
-                <label for="nickname">Nickname: *</label>
-                <input placeholder="Ex- Mridul" type="text" class="form-control" id="nickname" required>
-            </div>
-            <div class="form-group">
-                <label for="blood">Blood Group: *</label>
-                <input placeholder="O+" type="text" class="form-control" id="blood" required>
-            </div>
-            <div class="form-group">
-                <label for="address">Address: *</label>
-                <input placeholder="Ex- Baniachol" type="text" class="form-control" id="address" required>
-            </div>
-            <div class="form-group">
-                <label for="college">College Name: *</label>
-                <input placeholder="Ex- Notre Dame College" type="text" class="form-control" id="college" required>
-            </div>
-            <div class="form-group">
-                <label for="university">University:</label>
-                <input placeholder="Ex- CUET" type="text" class="form-control" id="university">
-            </div>
-            <div class="form-group">
-                <label for="duration">Study Duration: *</label>
-                <input placeholder="Ex- 2010-2020" type="text" class="form-control" id="duration" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input placeholder="Ex- 01674305994" type="number" class="form-control" id="phone">
-            </div>
-            <div class="form-group">
-                <label for="gmail">Gmail: *</label>
-                <input placeholder="Ex- mh.mahmudul28@gmail.com" type="text" class="form-control" id="gmail" required>
-            </div>
-            <div class="form-group">
-                <label for="fb">Facebook Id Link:</label>
-                <input placeholder="Ex- https://www.facebook.com/qquark" type="text" class="form-control" id="fb">
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select class="form-control" id="gender" required>
-                    <option value="">Select</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-secondary" id="showTableBtn">Show Table</button>
-        </form>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-10">
+      <img src="/assets/img-BQCNT-_v.png" class="header-img" alt="Header Image">
     </div>
-    <div id="data-table" style="display: none;">
-        <h2 class="my-4">Data Table</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Nickname</th>
-                    <th>Show More Info</th>
-                </tr>
-            </thead>
-            <tbody id="dataTableBody">
-                <!-- Data will be populated here -->
-            </tbody>
-        </table>
-    </div>
+  </div>
+  <div class="row justify-content-center text-section">
+    <div class="col-md-6 col-sm-10">
+      <p class="instruction-text"><strong>About Us:</strong> <br> <em>Welcome to our <b>Alumni Registration Portal</b> for the <b>Batch of 2020!</b> Here, you can easily register yourself as an alumni of our institution or browse through the profiles of your fellow classmates.</em></p>
 
-    <div id="user-info-table" style="display: none;">
-        <h2 class="my-4">User Information</h2>
-        <table class="table table-bordered">
-            <tbody id="userInfoTable">
-                <!-- User information will be populated here -->
-            </tbody>
-        </table>
-        <button type="button" class="btn btn-primary" id="back-btn">Back to Data Table</button>
+      <p><em> Our platform is designed to help us keep track of all our alumni, which can be incredibly valuable in various situations, including emergencies. By registering, you'll ensure that we have up-to-date information about you, making it easier for us to stay connected and provide support when needed.</em></p>
+
+      <p class="instruction-text"><strong>Registering:</strong> <br> <em>To register yourself as an alumni, you have to provide all the required information. Once you submit a registration request, our admin portal will review and verify your information. Once you are verified your registration will be approved and your information will be available on the list.</em></p>
+
+      <p><em><b>Note:</b> During the registration process you may be asked for a <b>OTP</b> verification.</em></p>
+
+      <p class="instruction-text"><strong>Editing Data:</strong> <br> <em>If you wish to edit your data you must go through an <b>OTP</b> verification. Only then you can edit and submit for approval. Like registration, an admin will verify your edited info and approve if eligible.</em></p>
+
+      <p class="instruction-text"><strong>Accessing Data:</strong> <br> <em>You can only see the alumni information if you are a registered alumni in our platform. Otherwise, you can't access any alumni information.</em></p>
+
+      <p class="instruction-text"><strong>Deleting Data:</strong> <br> <em>You can request deletation of your data anytime you want. However, <b>OTP</b> verification is a must in that case. Once an admin approves your deletation, your data will be deleted permanently</em></p>
+
+      <p class="instruction-text"><strong>Terms Conditions and Privacy Policy:</strong> <br> <em>By registering in this platform you agree to share your information with the other alumnis. However, we don't share your data with third parties under any circumstances. Information visible to other alumni are- <b>Name, Nickname, Blood Group, Gmail, Address, College, University.</b></em></p>
+
+      <p>If you agree, join us by registering. Click on Register Now below!</p>
     </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-10">
+      <a href="/form.html" class="btn btn-primary menu-btn">Register Now</a>
+      <a href="alumnilist.html" type="button" class="btn btn-secondary menu-btn">Alumni List</a>
+      <button type="button" class="btn btn-success menu-btn">Edit</button>
+      <button type="button" class="btn btn-danger menu-btn">Delete</button>
+    </div>
+  </div>
 </div>
 
-<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-/<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
-
-<!-- <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script> -->
-<!-- /<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script> -->
